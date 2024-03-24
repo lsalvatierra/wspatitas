@@ -35,9 +35,6 @@ CONSTRAINT FK_Mascotaperdida_1 FOREIGN KEY 	(idtipomascota) REFERENCES tipomasco
 );
 
 
-ALTER TABLE mascotaperdida ADD COLUMN lugar varchar(200) NOT NULL, ADD COLUMN contacto varchar(20) NOT NULL;
-
-
 INSERT INTO `tipomascota` (`idtipomascota`, `descriptipo`, `estado`) VALUES (NULL, 'Perro', '1'), (NULL, 'Gato', '2');
 
 INSERT INTO `mascotaperdida` (`idperdida`, `nommascota`, `idtipomascota`, `fechaperdida`, `descripcion`, `fecharegistro`, `urlimagen`, `estado`, `lugar`, `contacto`) 
