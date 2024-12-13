@@ -1,5 +1,8 @@
 <?php
 require_once("PersonaDAO.php");
+header("Access-Control-Allow-Origin: *"); // Permite solicitudes de cualquier origen
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT"); // Métodos permitidos
+header("Access-Control-Allow-Headers: Content-Type, Authorization"); // Encabezados permitidos
 header("Content-Type: application/json; charset=UTF-8");
 if($_SERVER['REQUEST_METHOD'] == 'PUT'){
     $postBody = file_get_contents("php://input");

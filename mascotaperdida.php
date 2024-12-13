@@ -1,5 +1,8 @@
 <?php 
 require_once("MascotaDAO.php");
+header("Access-Control-Allow-Origin: *"); // Permite solicitudes de cualquier origen
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT"); // Métodos permitidos
+header("Access-Control-Allow-Headers: Content-Type, Authorization"); // Encabezados permitidos
 header("Content-Type: application/json; charset=UTF-8");
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
  	$res = ListarMascotasPerdidas();
